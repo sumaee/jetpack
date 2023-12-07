@@ -68,7 +68,7 @@ fun Login(modifier: Modifier) {
                         .clip(RoundedCornerShape(16.dp)),
                 )
                 Spacer(Modifier.height(16.dp))
-                Text(text = "Coin Simulation", fontSize = 50.sp, color = Color.White)
+                Text(text = "Coin Simulation", fontSize = 45.sp, color = Color.White)
                 Spacer(Modifier.height(16.dp))
                 Text(
                     text = "Practice Investing Coins\nUsing This App",
