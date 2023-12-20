@@ -50,7 +50,7 @@ fun BottomNavigation(navController: NavHostController) {
                 selected = currentRoute == item.screenRoute,
                 alwaysShowLabel = false,
                 onClick = {
-                    navController.navigate("Main/${item.screenRoute}") {
+                    navController.navigate(item.screenRoute) {
                         navController.graph.startDestinationRoute?.let {
                             popUpTo(it) { saveState = true }
                         }

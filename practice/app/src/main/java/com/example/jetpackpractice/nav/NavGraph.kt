@@ -6,7 +6,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.jetpackpractice.page.BookmarkPage
 import com.example.jetpackpractice.page.DetailPage
-import com.example.jetpackpractice.page.LoginPage
 import com.example.jetpackpractice.page.MainPage
 import com.example.jetpackpractice.page.MyPage
 
@@ -15,13 +14,13 @@ fun NavGraph(
     navController: NavHostController
 ) {
     NavHost(navController = navController, startDestination = Screen.Main.route) {
-        composable(
-            route = Screen.Login.route
-        ) {
-            LoginPage(
-                navController = navController
-            )
-        }
+//        composable(
+//            route = Screen.Login.route
+//        ) {
+//            LoginPage(
+//                navController = navController
+//            )
+//        }
         composable(BottomNavItem.Main.screenRoute) { MainPage(navController = navController) }
         composable(BottomNavItem.ProductDetail.screenRoute) { DetailPage() }
         composable(BottomNavItem.Bookmark.screenRoute) { BookmarkPage() }
