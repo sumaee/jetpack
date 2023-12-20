@@ -1,19 +1,24 @@
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
 }
-
+fun getApiKey(properties: String): String {
+    return gradleLocalProperties(rootDir).getProperty(properties)
+}
 android {
-    namespace = "com.example.jetpackpractice"
+    namespace = "com.coinsimulation"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.jetpackpractice"
+        applicationId = "com.coinsimulation"
         minSdk = 33
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
-
+        buildConfigField("String", "KAKAO_NATIVE_APP_KEY", getApiKey("kakao_native_app_key"))
+        resValue("string", "kakao_oauth", getApiKey("kakao_oauth"))
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
@@ -38,6 +43,8 @@ android {
     }
     buildFeatures {
         compose = true
+        viewBinding = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.3"
@@ -51,7 +58,17 @@ android {
 
 dependencies {
     val activity_version = "1.8.1"
-
+    //카카오 로그인
+    implementation("com.kakao.sdk:v2-all:2.18.0") // 전체 모듈 설치, 2.11.0 버전부터 지원
+    implementation("com.kakao.sdk:v2-user:2.18.0") // 카카오 로그인
+    implementation("com.kakao.sdk:v2-talk:2.18.0") // 친구, 메시지(카카오톡)
+    implementation("com.kakao.sdk:v2-share:2.18.0")// 메시지(카카오톡 공유)
+    implementation("com.kakao.sdk:v2-friend:2.18.0") // 카카오톡 소셜 피커, 리소스 번들 파일 포함
+    implementation("com.kakao.sdk:v2-navi:2.18.0")// 카카오내비
+    implementation("com.kakao.sdk:v2-cert:2.18.0")// 카카오 인증서비스
+    //api 통신
+    implementation("com.squareup.retrofit2:retrofit:2.5.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.6.0")
     //테이블 생성
     implementation("com.seanproctor:datatable:0.2.1")
     //화면 이동

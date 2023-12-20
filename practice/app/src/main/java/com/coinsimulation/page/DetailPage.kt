@@ -1,4 +1,4 @@
-package com.example.jetpackpractice.page
+package com.coinsimulation.page
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

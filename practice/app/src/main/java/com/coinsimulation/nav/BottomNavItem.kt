@@ -1,6 +1,6 @@
-package com.example.jetpackpractice.nav
+package com.coinsimulation.nav
 
-import com.example.jetpackpractice.R
+import com.coinsimulation.R
 
 sealed class BottomNavItem(
     var title: Int,

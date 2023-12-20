@@ -1,4 +1,4 @@
-package com.example.jetpackpractice.ui.theme
+package com.coinsimulation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

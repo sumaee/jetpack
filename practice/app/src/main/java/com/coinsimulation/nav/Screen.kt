@@ -1,4 +1,4 @@
-package com.example.jetpackpractice.nav
+package com.coinsimulation.nav
 
 sealed class Screen(val route: String) {
     object Login : Screen(route = "Login_page")

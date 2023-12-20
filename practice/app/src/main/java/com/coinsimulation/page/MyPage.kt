@@ -1,4 +1,4 @@
-package com.example.jetpackpractice.page
+package com.coinsimulation.page
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -12,14 +12,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 
 @Composable
-fun BookmarkPage() {
+fun MyPage() {
     Box(
         modifier = Modifier
             .fillMaxSize()
             .background(MaterialTheme.colors.primary)
     ) {
         Text(
-            text = "Bookmark Page",
+            text = "MyPage",
             style = MaterialTheme.typography.h1,
             textAlign = TextAlign.Center,
             color = Color.White,

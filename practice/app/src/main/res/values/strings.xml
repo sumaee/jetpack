@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">jetpackPractice</string>
+    <string name="app_name">coinsimulation</string>
     <string name="text_Main">Main</string>
     <string name="text_Detail">Chart</string>
     <string name="text_Bookmark">Bookmark</string>

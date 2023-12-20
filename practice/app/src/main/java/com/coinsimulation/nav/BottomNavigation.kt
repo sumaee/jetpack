@@ -1,4 +1,4 @@
-package com.example.jetpackpractice.nav
+package com.coinsimulation.nav
 
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width

@@ -1,4 +1,4 @@
-package com.example.jetpackpractice.page
+package com.coinsimulation.page
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -17,15 +17,16 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavHostController
-import com.example.jetpackpractice.ui.theme.Typography
+import com.coinsimulation.ui.theme.Typography
 
 
 @Composable
 fun MainPage(
-    navController: NavHostController
 ) {
-    Column(modifier = Modifier.padding(16.dp)) {
+    Column(
+        modifier = Modifier.padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
         Row {
             Text(text = "검색창", style = Typography.bodyLarge)
             Text(text = "알림버튼", style = Typography.bodyLarge)
@@ -34,18 +35,15 @@ fun MainPage(
             Box(
                 modifier = Modifier.fillMaxSize()
             ) {
-                Column {
+                Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
 
-                    Spacer(Modifier.height(16.dp))
                     Text(text = "Coins", style = Typography.bodyLarge)
 
-                    Spacer(Modifier.height(16.dp))
                     CoinTable(coins = CoinList)
 
                     Spacer(Modifier.height(20.dp))
 
                     Text(text = "Ranking", style = Typography.bodyLarge)
-                    Spacer(Modifier.height(16.dp))
 
                     RankingTable(ranks = RankingList)
                 }
@@ -138,7 +136,7 @@ val CoinList = listOf(
 fun CoinTable(coins: List<Coins>) {
     Box(
         modifier = Modifier
-            .height(170.dp) // 스크롤 영역의 높이를 설정
+            .height(200.dp) // 스크롤 영역의 높이를 설정
             .fillMaxWidth()
     ) {
         LazyColumn {
