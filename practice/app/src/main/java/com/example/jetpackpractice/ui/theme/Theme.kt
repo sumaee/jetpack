@@ -30,7 +30,6 @@ private val LightColorScheme = lightColorScheme(
     tertiary = Pink40,
     background = Color(0xFF161616) // 배경색을 #161616으로 설정
 )
-
 @Composable
 fun JetpackPracticeTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),

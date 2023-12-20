@@ -1,6 +1,7 @@
 package com.example.jetpackpractice.ui.theme
 
 import androidx.compose.material3.Typography
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -10,15 +11,33 @@ import androidx.compose.ui.unit.sp
 import com.example.jetpackpractice.R
 
 // Set of Material typography styles to start with
-private val poppins = FontFamily(
-    Font(R.font.poppins_black, FontWeight.Bold, FontStyle.Normal)
+private val roboto = FontFamily(
+    Font(R.font.robotocondensed_black, FontWeight.Bold, FontStyle.Normal),
+    Font(R.font.robotocondensed_light, FontWeight.Light, FontStyle.Normal)
 )
 val Typography = Typography(
-    bodyLarge = TextStyle(
-        fontFamily = poppins,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
+    titleLarge = TextStyle(
+        fontFamily = roboto,
+        fontWeight = FontWeight.Bold,
+        fontSize = 50.sp,
         lineHeight = 24.sp,
+        letterSpacing = 0.5.sp,
+        color = Color.White
+    ),
+    bodyLarge = TextStyle(
+        fontFamily = roboto,
+        fontWeight = FontWeight.Light,
+        fontSize = 26.sp,
+        lineHeight = 24.sp,
+        color = Color.White,
+        letterSpacing = 0.5.sp
+    ),
+    bodySmall = TextStyle(
+        fontFamily = roboto,
+        fontWeight = FontWeight.Light,
+        fontSize = 22.sp,
+        lineHeight = 24.sp,
+        color = Color.White,
         letterSpacing = 0.5.sp
     )
     /* Other default text styles to override

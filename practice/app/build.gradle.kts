@@ -52,6 +52,13 @@ android {
 dependencies {
     val activity_version = "1.8.1"
 
+    //테이블 생성
+    implementation("com.seanproctor:datatable:0.2.1")
+    //화면 이동
+    implementation("androidx.navigation:navigation-compose:2.7.5")
+    implementation("androidx.navigation:navigation-runtime-ktx:2.7.5")
+    // 폰트
+    implementation("androidx.compose.ui:ui-text-google-fonts:1.5.4")
     // Java language implementation
     implementation("androidx.activity:activity-ktx:$activity_version")
     // Kotlin
